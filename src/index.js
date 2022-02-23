@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const fs = require('fs');
 const multer = require('multer');
 const teams = require('../data/equipos.db.json');
-const { createTeam } = require('./services/index');
+const { createTeam, updateTeam } = require('./services/index');
 
 const URL = 'http://localhost:';
 const PORT = 8080;
@@ -43,6 +43,41 @@ app.post('/create-team', upload.single('crestUrl'), function (req, res) {
   fs.writeFile('./data/equipos.db.json', newListTeams, function (err) {
     if (err) throw new Error("Can't create team");
     console.log('Team added');
+  });
+
+  res.redirect('/');
+});
+
+app.get('/team/:id/edit', function (req, res) {
+  const id = Number(req.params.id);
+  const team = teams.find((team) => team.id === id);
+
+  res.render('edit-team', {
+    layout: 'main',
+    data: {
+      team,
+    },
+  });
+});
+
+app.post('/team/:id/edit', upload.single('crestUrl'), function (req, res) {
+  const id = Number(req.params.id);
+  const team = teams.find((team) => team.id === id);
+  const index = teams.findIndex((team) => team.id === id);
+
+  if (index === -1) {
+    throw new Error('Team not found');
+  }
+
+  const teamLogo = req.file === undefined ? team.crestUrl : `/imagenes/${req.file.filename}`;
+  const update = updateTeam(req.body, teamLogo, teams[index].id);
+
+  teams[index] = update;
+  console.log(teams[index]);
+  const newListTeams = JSON.stringify(teams, null, 2);
+  fs.writeFile('./data/equipos.db.json', newListTeams, function (err) {
+    if (err) throw new Error("Can't create team");
+    console.log('Team update');
   });
 
   res.redirect('/');

@@ -1,0 +1,143 @@
+<section class='form-container margin-y' data-test='form-container'>
+  <form
+    action='/team/{{data.team.id}}/edit'
+    method='POST'
+    enctype='multipart/form-data'
+    class='form-create-team'
+    data-test='form-edit-team'
+  >
+
+    <div class='profile-pic'>
+      <label class='profile-pic__label' for='upload-logo-input'>
+        <span>Change Image</span>
+      </label>
+      <input
+        id='upload-logo-input'
+        class='upload-logo-input'
+        name='crestUrl'
+        type='file'
+        accept='.png, .jpg, .jpeg, .svg'
+      />
+      <img src='{{data.team.crestUrl}}' class='logo-team' id='output' width='200' />
+    </div>
+
+    <label class='form-label'>Team name <span class='form-required'>*</span></label>
+    <input
+      class='form-input'
+      name='name'
+      type='text'
+      data-test='create-team-name'
+      value='{{data.team.name}}'
+      required
+    />
+
+    <label class='form-label'>Team short name <span class='form-required'>*</span></label>
+    <input class='form-input' name='shortName' type='text' value='{{data.team.shortName}}' required />
+
+    <label class='form-label'>Country <span class='form-required'>*</span></label>
+    <select id='country' name='country' class='form-input' required>
+      <option value></option>
+      <option value='Africa'>Africa</option>
+      <option value='Argentina'>Argentina</option>
+      <option value='Asia'>Asia</option>
+      <option value='Australia'>Australia</option>
+      <option value='Austria'>Austria</option>
+      <option value='Belgium'>Belgium</option>
+      <option value='Bolivia'>Bolivia</option>
+      <option value='Bosnia and Herzegovina'>Bosnia and Herzegovina</option>
+      <option value='Brazil'>Brazil</option>
+      <option value='Bulgaria'>Bulgaria</option>
+      <option value='Canada'>Canada</option>
+      <option value='Chile'>Chile</option>
+      <option value='China'>China</option>
+      <option value='Colombia'>Colombia</option>
+      <option value='Croatia'>Croatia</option>
+      <option value='Czech Republic'>Czech Republic</option>
+      <option value='Denmark'>Denmark</option>
+      <option value='Ecuador'>Ecuador</option>
+      <option value='England'>England</option>
+      <option value='Estonia'>Estonia</option>
+      <option value='Europe'>Europe</option>
+      <option value='Finland'>Finland</option>
+      <option value='France'>France</option>
+      <option value='Germany'>Germany</option>
+      <option value='Greece'>Greece</option>
+      <option value='Hungary'>Hungary</option>
+      <option value='Iceland'>Iceland</option>
+      <option value='India'>India</option>
+      <option value='Israel'>Israel</option>
+      <option value='Italy'>Italy</option>
+      <option value='Japan'>Japan</option>
+      <option value='Latvia'>Latvia</option>
+      <option value='Lithuania'>Lithuania</option>
+      <option value='Malta'>Malta</option>
+      <option value='Mexico'>Mexico</option>
+      <option value='Netherlands'>Netherlands</option>
+      <option value='North Ireland'>North Ireland</option>
+      <option value='Norway'>Norway</option>
+      <option value='Oceania'>Oceania</option>
+      <option value='Panama'>Panama</option>
+      <option value='Paraguay'>Paraguay</option>
+      <option value='Peru'>Peru</option>
+      <option value='Poland'>Poland</option>
+      <option value='Portugal'>Portugal</option>
+      <option value='Republic of Ireland'>Republic of Ireland</option>
+      <option value='Romania'>Romania</option>
+      <option value='Russian Federation'>Russian Federation</option>
+      <option value='Scotland'>Scotland</option>
+      <option value='South Africa'>South Africa</option>
+      <option value='South America'>South America</option>
+      <option value='Spain'>Spain</option>
+      <option value='Sweden'>Sweden</option>
+      <option value='Switzerland'>Switzerland</option>
+      <option value='Turkey'>Turkey</option>
+      <option value='Ukraine'>Ukraine</option>
+      <option value='United States'>United States</option>
+      <option value='Uruguay'>Uruguay</option>
+      <option value='Venezuela'>Venezuela</option>
+      <option value='Vietnam'>Vietnam</option>
+      <option value='Wales'>Wales</option>
+      <option value='World'>World</option>
+    </select>
+
+    <label class='form-label'>Stadium name <span class='form-required'>*</span></label>
+    <input
+      class='form-input'
+      name='venue'
+      type='text'
+      data-test='create-team-stadium'
+      value='{{data.team.venue}}'
+      required
+    />
+
+    <label class='form-label'>Club colors <span class='form-required'>*</span></label>
+    <input
+      class='form-input'
+      name='clubColors'
+      type='text'
+      data-test='create-team-colors'
+      value='{{data.team.clubColors}}'
+      required
+    />
+
+    <label class='form-label'>Founded</label>
+    <input class='form-input' name='founded' type='number' value='{{data.team.founded}}' />
+
+    <label class='form-label'>Website</label>
+    <input class='form-input' name='website' type='url' value='{{data.team.website}}' />
+
+    <label class='form-label'>Email</label>
+    <input class='form-input' name='email' type='email' value='{{data.team.email}}' />
+
+    <label class='form-label'>Phone</label>
+    <input class='form-input' name='phone' type='tel' value='{{data.team.phone}}' />
+
+    <label class='form-label'>Address</label>
+    <input class='form-input' name='address' type='text' value='{{data.team.address}}' />
+
+    <div class='btn-edit-team-container'>
+      <button type='submit' class='btn add-save-send-team width-40'>Save</button>
+      <button type='button' class='btn btn-default width-40'><a class='link-cancel' href='/'>Cancel</a></button>
+    </div>
+  </form>
+</section>
