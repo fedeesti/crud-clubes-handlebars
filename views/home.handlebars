@@ -1,0 +1,31 @@
+<h1 class='home-title' data-test='home-title'>LIST OF TEAMS</h1>
+
+<section>
+  <span data-test='amount-of-teams'>There are {{data.teams.length}} teams</span>
+  <button
+    class='btn add-save-send-team'
+    data-test='btn-create-team'
+    onclick="window.location='/create-team'"
+  >Add</button>
+</section>
+
+<table class='content-table' data-test='teams-table'>
+  <thead class='content-table__thead' data-test='teams-thead'>
+    <tr>
+      <th>Team name</th>
+      <th>Country</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody class='content-table__tbody' data-test='teams-tbody'>
+    {{#each data.teams as |team|}}
+      <tr class='row-team'>
+        <td> {{team.shortName}} </td>
+        <td> {{team.area.name}} </td>
+        <td><a class='link' href='/team/{{team.id}}/watch'>Watch</a>,
+          <a class='link' href='/team/{{team.id}}/edit'>Edit</a>,
+          <a class='link' href='#'>Delete</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

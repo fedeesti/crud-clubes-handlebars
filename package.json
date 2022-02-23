@@ -1,10 +1,10 @@
 {
   "name": "crud-clubes-handlebars",
   "version": "1.0.0",
-  "description": "",
+  "description": "granDT project for r/argentina-programa",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
