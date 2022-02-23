@@ -1,0 +1,17 @@
+<section class='modal modal--show'>
+  <div class='modal__container'>
+    <h2 class='modal__title'>Remove team</h2>
+    <p class='modal__paragraph'>If you want to delete
+      <span class='form-required'>{{data.team.name}}</span>
+      click delete, otherwise click cancel.</p>
+    <form
+      method='POST'
+      class='btn-modal-container'
+      action='/team/{{data.team.id}}/delete'
+      enctype='multipart/form-data'
+    >
+      <button type='submit' class='btn btn-delete width-40'>Delete</button>
+      <button class='btn btn-default btn-cancel width-40'><a class='link-cancel' href='/'>Cancel</a></button>
+    </form>
+  </div>
+</section>
