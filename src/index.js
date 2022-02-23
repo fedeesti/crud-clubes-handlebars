@@ -10,6 +10,7 @@ const PORT = 8080;
 
 const app = express();
 const hbs = exphbs.create();
+require('dotenv').config();
 const upload = multer({ dest: './uploads/imagenes' });
 
 app.engine('handlebars', hbs.engine);
@@ -46,6 +47,22 @@ app.post('/create-team', upload.single('crestUrl'), function (req, res) {
   });
 
   res.redirect('/');
+});
+
+app.get('/team/:id/watch', function (req, res) {
+  const id = Number(req.params.id);
+  const team = teams.find((team) => team.id === id);
+  const API_KEY = process.env.API_KEY;
+  const editAddress = team.address.replaceAll(' ', '+');
+
+  res.render('view-team', {
+    layout: 'main',
+    data: {
+      team,
+      editAddress,
+      API_KEY,
+    },
+  });
 });
 
 app.get('/team/:id/edit', function (req, res) {
