@@ -1,0 +1,246 @@
+[
+  {
+    "country": "Africa",
+    "id": 2001
+  },
+  {
+    "country": "Argentina",
+    "id": 2011
+  },
+  {
+    "country": "Asia",
+    "id": 2014
+  },
+  {
+    "country": "Australia",
+    "id": 2015
+  },
+  {
+    "country": "Austria",
+    "id": 2016
+  },
+  {
+    "country": "Belgium",
+    "id": 2023
+  },
+  {
+    "country": "Bolivia",
+    "id": 2028
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "id": 2030
+  },
+  {
+    "country": "Brazil",
+    "id": 2032
+  },
+  {
+    "country": "Bulgaria",
+    "id": 2035
+  },
+  {
+    "country": "Canada",
+    "id": 2040
+  },
+  {
+    "country": "Chile",
+    "id": 2041
+  },
+  {
+    "country": "China",
+    "id": 2046
+  },
+  {
+    "country": "Colombia",
+    "id": 2049
+  },
+  {
+    "country": "Croatia",
+    "id": 2058
+  },
+  {
+    "country": "Czech Republic",
+    "id": 2062
+  },
+  {
+    "country": "Denmark",
+    "id": 2065
+  },
+  {
+    "country": "Ecuador",
+    "id": 2069
+  },
+  {
+    "country": "England",
+    "id": 2072
+  },
+  {
+    "country": "Estonia",
+    "id": 2075
+  },
+  {
+    "country": "Europe",
+    "id": 2077
+  },
+  {
+    "country": "Finland",
+    "id": 2080
+  },
+  {
+    "country": "France",
+    "id": 2081
+  },
+  {
+    "country": "Germany",
+    "id": 2088
+  },
+  {
+    "country": "Greece",
+    "id": 2093
+  },
+  {
+    "country": "Hungary",
+    "id": 2106
+  },
+  {
+    "country": "Iceland",
+    "id": 2107
+  },
+  {
+    "country": "India",
+    "id": 2108
+  },
+  {
+    "country": "Israel",
+    "id": 2113
+  },
+  {
+    "country": "Italy",
+    "id": 2114
+  },
+  {
+    "country": "Japan",
+    "id": 2116
+  },
+  {
+    "country": "Latvia",
+    "id": 2129
+  },
+  {
+    "country": "Lithuania",
+    "id": 2135
+  },
+  {
+    "country": "Malta",
+    "id": 2143
+  },
+  {
+    "country": "Mexico",
+    "id": 2149
+  },
+  {
+    "country": "Netherlands",
+    "id": 2163
+  },
+  {
+    "country": "Northern Ireland",
+    "id": 2171
+  },
+  {
+    "country": "Norway",
+    "id": 2173
+  },
+  {
+    "country": "Oceania",
+    "id": 2175
+  },
+  {
+    "country": "Panama",
+    "id": 2181
+  },
+  {
+    "country": "Paraguay",
+    "id": 2182
+  },
+  {
+    "country": "Peru",
+    "id": 2184
+  },
+  {
+    "country": "Poland",
+    "id": 2186
+  },
+  {
+    "country": "Portugal",
+    "id": 2187
+  },
+  {
+    "country": "Republic of Ireland",
+    "id": 2192
+  },
+  {
+    "country": "Romania",
+    "id": 2193
+  },
+  {
+    "country": "Russian Federation",
+    "id": 2194
+  },
+  {
+    "country": "Scotland",
+    "id": 2204
+  },
+  {
+    "country": "South Africa",
+    "id": 2219
+  },
+  {
+    "country": "South America",
+    "id": 2220
+  },
+  {
+    "country": "Spain",
+    "id": 2224
+  },
+  {
+    "country": "Sweden",
+    "id": 2233
+  },
+  {
+    "country": "Switzerland",
+    "id": 2234
+  },
+  {
+    "country": "Turkey",
+    "id": 2247
+  },
+  {
+    "country": "Ukraine",
+    "id": 2253
+  },
+  {
+    "country": "United States",
+    "id": 2256
+  },
+  {
+    "country": "Uruguay",
+    "id": 2257
+  },
+  {
+    "country": "Venezuela",
+    "id": 2262
+  },
+  {
+    "country": "Vietnam",
+    "id": 2263
+  },
+  {
+    "country": "Wales",
+    "id": 2264
+  },
+  {
+    "country": "World",
+    "id": 2267
+  }
+]
