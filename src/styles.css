@@ -11,6 +11,9 @@
   --dark-green: #a1c181;
   --required: #f94144;
   --margin-title: 60px auto;
+  --margin-form: 20px auto;
+  --charcoal-light: #364958;
+  --charcoal-dark: #233d4d;
 }
 
 body {
@@ -24,7 +27,7 @@ body {
   top: 0;
   height: 40px;
   width: 100%;
-  background-color: #233d4d;
+  background-color: var(--charcoal-dark);
   z-index: 10;
 }
 
@@ -76,10 +79,18 @@ body {
 .full-width {
   width: 100%;
 }
+.width-40 {
+  width: 40%;
+}
 
 .add-save-send-team {
   background: linear-gradient(180deg, #f5b814 0%, #ed8317 100%);
   color: var(--text-color);
+}
+
+.btn-default {
+  background: var(--text-color);
+  color: var(--charcoal-light);
 }
 
 .content-table {
@@ -91,7 +102,7 @@ body {
 }
 
 .content-table__thead {
-  background-color: #233d4d;
+  background-color: var(--charcoal-dark);
   color: var(--text-color);
   text-align: center;
 }
@@ -124,6 +135,12 @@ th {
   padding: 40px;
 }
 
+.form-create-team {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
 .form-label {
   display: block;
   font-weight: 700;
@@ -147,7 +164,7 @@ th {
 
 .form-submit {
   width: 100%;
-  margin: 20px 0;
+  margin: var(--margin-form);
 }
 
 .profile-pic {
@@ -195,4 +212,24 @@ th {
   display: inline-flex;
   padding: 0.2em;
   height: 2em;
+}
+
+.margin-y {
+  margin: var(--margin-form);
+}
+
+.btn-edit-team-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.link-cancel {
+  text-decoration: none;
+  color: var(--charcoal-light);
+}
+
+.link-cancel {
+  text-decoration: none;
+  color: var(--charcoal-light);
 }
