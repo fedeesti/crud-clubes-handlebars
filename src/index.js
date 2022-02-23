@@ -83,6 +83,36 @@ app.post('/team/:id/edit', upload.single('crestUrl'), function (req, res) {
   res.redirect('/');
 });
 
+app.get('/team/:id/delete', function (req, res) {
+  const id = Number(req.params.id);
+  const team = teams.find((team) => team.id === id);
+
+  res.render('partials/modal-delete', {
+    layout: 'main',
+    data: {
+      team,
+    },
+  });
+});
+
+app.post('/team/:id/delete', function (req, res) {
+  const id = Number(req.params.id);
+  const index = teams.findIndex((team) => team.id === id);
+
+  if (index === -1) {
+    throw new Error('Team not found');
+  }
+
+  teams.splice(index, 1);
+  const newListTeams = JSON.stringify(teams, null, 2);
+  fs.writeFile('./data/equipos.db.json', newListTeams, function (err) {
+    if (err) throw new Error("Can't delete team");
+    console.log('Team delete');
+  });
+
+  res.redirect('/');
+});
+
 app.listen(PORT, () => {
   console.log(`granDT project in ${URL}${PORT}`);
 });
