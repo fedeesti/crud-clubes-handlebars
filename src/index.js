@@ -6,7 +6,7 @@ const teams = require('../data/equipos.db.json');
 const { createTeam, updateTeam } = require('./services/index');
 
 const URL = 'http://localhost:';
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 const hbs = exphbs.create();
